@@ -1,0 +1,68 @@
+.select {
+  width: 200px;
+  height: 36px;
+  background-color: var(--white);
+  position: relative;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 10px;
+  color: var(--gray);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+
+
+  .selectedItem {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .itemBlock {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    top: 30px;
+    left: 0;
+    background-color: var(--white);
+    width: 200px;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    transition: .5s;
+
+    .item {
+      padding: 9px 10px;
+      list-style: none;
+      width: 100%;
+
+      &:hover {
+        background-color: var(--gray);
+        color: var(--white);
+      }
+    }
+
+    .active {
+      background-color: var(--gray);
+      padding: 9px 10px;
+      color: var(--white);
+      width: 200px;
+    }
+  }
+
+  .openModal {
+    opacity: 1;
+    pointer-events: all;
+    top: 36px;
+  }
+}
