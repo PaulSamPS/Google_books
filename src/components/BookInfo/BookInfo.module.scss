@@ -1,112 +1,122 @@
 .wrapper {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  grid-template-areas:
-          'back back'
-          'title title'
-          'image info'
-;
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	grid-template-areas:
+		'back back'
+		'title title'
+		'image info';
 
-  animation: .5s linear;
-  animation-name: opacity;
+	animation: 0.5s linear;
+	animation-name: opacity;
 
-  @keyframes opacity {
-    from {
-      opacity: 0;
-    }
+	@keyframes opacity {
+		from {
+			opacity: 0;
+		}
 
-    to {
-      opacity: 1;
-    }
-  }
+		to {
+			opacity: 1;
+		}
+	}
 
-  .back {
-    margin-top: 40px;
-    grid-area: back;
-    color: var(--gray);
-    display: flex;
-    align-items: center;
-    transition: color ease .2s;
-    cursor: pointer;
+	.back {
+		display: flex;
+		align-items: center;
 
-    .text {
-      font-size: 20px;
-      font-weight: 600;
-    }
+		margin-top: 40px;
 
-    &:hover {
-      color: var(--black);
+		cursor: pointer;
+		transition: color ease 0.2s;
 
-      svg {
-        fill: var(--black);
-      }
-    }
-  }
+		color: var(--gray);
+		grid-area: back;
 
-  .title {
-    grid-area: title;
-    font-size: 18px;
-    margin-bottom: 40px;
-    margin-top: 40px;
-  }
+		.text {
+			font-size: 20px;
+			font-weight: 600;
+		}
 
-  .image {
-    height: 200px;
-    width: 200px;
-    object-fit: contain;
-    grid-area: image;
-  }
+		&:hover {
+			color: var(--black);
 
-  .info {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    row-gap: 20px;
-    grid-area: info;
-    line-height: 1.5;
+			svg {
+				fill: var(--black);
+			}
+		}
+	}
 
-    .categories {
-      &:before {
-        content: 'Categories:';
-        margin-right: 5px;
-        color: var(--gray);
-      }
-    }
+	.title {
+		margin-top: 40px;
+		margin-bottom: 40px;
 
-    .authors  {
-      &:before {
-        content: 'Author:';
-        margin-right: 5px;
-        color: var(--gray);
-      }
-    }
+		font-size: 18px;
+		grid-area: title;
+	}
 
-    .desc {
-      &:before {
-        content: 'Description:';
-        margin-right: 5px;
-        color: var(--gray);
-      }
-    }
-  }
+	.image {
+		width: 200px;
+		height: 200px;
+		object-fit: contain;
+		grid-area: image;
+	}
+
+	.info {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+		row-gap: 20px;
+		grid-area: info;
+
+		line-height: 1.5;
+
+		.categories {
+			&::before {
+				margin-right: 5px;
+
+				content: 'Categories:';
+
+				color: var(--gray);
+			}
+		}
+
+		.authors {
+			&::before {
+				margin-right: 5px;
+
+				content: 'Author:';
+
+				color: var(--gray);
+			}
+		}
+
+		.desc {
+			&::before {
+				margin-right: 5px;
+
+				content: 'Description:';
+
+				color: var(--gray);
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 600px) {
-  .wrapper {
-    justify-items: center;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-          'back'
-          'title'
-          'image'
-          'info';
+	.wrapper {
+		justify-items: center;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'back'
+			'title'
+			'image'
+			'info';
 
-    .image {
-      margin-bottom: 20px;
-    }
+		.image {
+			margin-bottom: 20px;
+		}
 
-    .back {
-      justify-self: left;
-    }
-  }
+		.back {
+			justify-self: left;
+		}
+	}
 }

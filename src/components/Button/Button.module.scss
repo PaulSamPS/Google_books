@@ -25,7 +25,8 @@
 
 	svg {
 		fill: var(--white);
-		transition: transform ease .2s;
+
+		transition: transform ease 0.2s;
 	}
 
 	&:hover {

@@ -1,68 +1,81 @@
 .select {
-  width: 200px;
-  height: 36px;
-  background-color: var(--white);
-  position: relative;
-  border-radius: 5px 5px 0 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 5px 10px;
-  color: var(--gray);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+	position: relative;
 
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 
-  .selectedItem {
-    width: 100%;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+	width: 200px;
+	height: 36px;
+	padding: 5px 10px;
 
-  .itemBlock {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: absolute;
-    flex-direction: column;
-    top: 30px;
-    left: 0;
-    background-color: var(--white);
-    width: 200px;
-    border-radius: 0 0 5px 5px;
-    cursor: pointer;
-    margin: 0;
-    padding: 0;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
-    z-index: 10;
-    pointer-events: none;
-    opacity: 0;
-    transition: .5s;
+	color: var(--gray);
+	border-radius: 5px 5px 0 0;
+	background-color: var(--white);
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
 
-    .item {
-      padding: 9px 10px;
-      list-style: none;
-      width: 100%;
+	.selectedItem {
+		position: relative;
 
-      &:hover {
-        background-color: var(--gray);
-        color: var(--white);
-      }
-    }
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 
-    .active {
-      background-color: var(--gray);
-      padding: 9px 10px;
-      color: var(--white);
-      width: 200px;
-    }
-  }
+		width: 100%;
 
-  .openModal {
-    opacity: 1;
-    pointer-events: all;
-    top: 36px;
-  }
+		cursor: pointer;
+	}
+
+	.itemBlock {
+		position: absolute;
+		z-index: 10;
+		top: 30px;
+		left: 0;
+
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: flex-start;
+
+		width: 200px;
+		margin: 0;
+		padding: 0;
+
+		cursor: pointer;
+		transition: 0.5s;
+		pointer-events: none;
+
+		opacity: 0;
+		border-radius: 0 0 5px 5px;
+		background-color: var(--white);
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+
+		.item {
+			width: 100%;
+			padding: 9px 10px;
+
+			list-style: none;
+
+			&:hover {
+				color: var(--white);
+				background-color: var(--gray);
+			}
+		}
+
+		.active {
+			width: 200px;
+			padding: 9px 10px;
+
+			color: var(--white);
+			background-color: var(--gray);
+		}
+	}
+
+	.openModal {
+		top: 36px;
+
+		pointer-events: all;
+
+		opacity: 1;
+	}
 }

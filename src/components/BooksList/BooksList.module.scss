@@ -1,50 +1,54 @@
 .wrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
-  animation: .5s linear;
-  animation-name: opacity;
+	animation: 0.5s linear;
+	animation-name: opacity;
 
-  @keyframes opacity {
-    from {
-      opacity: 0;
-    }
+	@keyframes opacity {
+		from {
+			opacity: 0;
+		}
 
-    to {
-      opacity: 1;
-    }
-  }
+		to {
+			opacity: 1;
+		}
+	}
 
-  h3 {
-    text-align: center;
-    margin: 20px 0;
-  }
+	h3 {
+		margin: 20px 0;
 
-  .bookList {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 30px;
-    justify-content: space-between;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    row-gap: 30px;
-    margin-bottom: 40px;
-  }
+		text-align: center;
+	}
 
-  .btn {
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+	.bookList {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		margin-bottom: 40px;
+		column-gap: 30px;
+		grid-template-columns: repeat(3, 1fr);
+		justify-items: center;
+		row-gap: 30px;
+	}
+
+	.btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin-bottom: 40px;
+	}
 }
 
-@media screen and (max-width: 550px){
-  .wrapper {
-    .bookList {
-      column-gap: 30px;
-      justify-content: center;
-    }
-  }
+@media screen and (max-width: 550px) {
+	.wrapper {
+		.bookList {
+			column-gap: 30px;
+
+			justify-content: center;
+		}
+	}
 }

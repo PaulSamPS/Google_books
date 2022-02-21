@@ -1,28 +1,29 @@
 body {
-  margin: 0;
-  padding: 0;
-  overflow-y: scroll;
+	overflow-y: scroll;
 
-  color: var(--black);
-  background: #F5F6F8;
+	margin: 0;
+	padding: 0;
 
-  font-family: 'Roboto', sans-serif;
+	color: var(--black);
+	background: #F5F6F8;
+
+	font-family: 'Roboto', sans-serif;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 
-  color: inherit;
+	color: inherit;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 :root {
-  --black: #3B434E;
-  --gray-light: #EBEBEB;
-  --gray: #A4A4A4;
-  --gray-dark: #6C7077;
-  --white: white;
+	--black: #3B434E;
+	--gray-light: #EBEBEB;
+	--gray: #A4A4A4;
+	--gray-dark: #6C7077;
+	--white: white;
 }

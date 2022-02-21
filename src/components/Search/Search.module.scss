@@ -1,60 +1,62 @@
 .search {
-  position: relative;
+	position: relative;
 
-  width: 100%;
-  border-bottom: 1px solid var(--gray-light);
-  padding: 20px 0;
+	width: 100%;
+	padding: 20px 0;
 
-  .input input {
-    width: 100%;
-  }
+	border-bottom: 1px solid var(--gray-light);
 
-  .button {
-    position: absolute;
-    top: 23px;
-    right: 3px;
+	.input input {
+		width: 100%;
+	}
 
-    width: 30px;
-    height: 30px;
-    padding: 7px;
+	.button {
+		position: absolute;
+		top: 23px;
+		right: 3px;
 
-    svg {
-      width: 15px;
-      height: 15px;
-    }
+		width: 30px;
+		height: 30px;
+		padding: 7px;
 
-    &:disabled {
-      background-color: var(--gray-light);
-    }
-  }
+		svg {
+			width: 15px;
+			height: 15px;
+		}
 
-  .selectWrapper {
-    display: grid;
-    grid-template-columns: 1fr auto;
+		&:disabled {
+			background-color: var(--gray-light);
+		}
+	}
 
-    .select {
-      margin-top: 20px;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      align-items: center;
-      column-gap: 10px;
+	.selectWrapper {
+		display: grid;
+		grid-template-columns: 1fr auto;
 
-      .name {
-        color: var(--gray);
-      }
-    }
-  }
+		.select {
+			display: grid;
+			align-items: center;
+
+			margin-top: 20px;
+			grid-template-columns: auto 1fr;
+			column-gap: 10px;
+
+			.name {
+				color: var(--gray);
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 600px) {
-  .search {
-    .selectWrapper {
-      display: grid;
-      grid-template-columns: 1fr;
+	.search {
+		.selectWrapper {
+			display: grid;
+			grid-template-columns: 1fr;
 
-      .select {
-        grid-template-columns: 80px 1fr;
-      }
-    }
-  }
+			.select {
+				grid-template-columns: 80px 1fr;
+			}
+		}
+	}
 }
